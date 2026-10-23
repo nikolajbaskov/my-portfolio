@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: #2a1645;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        button{
+            background-color: #a855f7;
+            color: white;
+            font-size: 18px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+        }
+        button:hover{
+            background-color: #c084fc;
+        }
+        #projects{
+            text-align: center;
+            margin-top: 600px;
+            padding: 40px;
+        }
+        #projects h2{
+            font-size: 35px;
+            color: #c084fc;
+        }
+        #about{
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #382052;
+            border-radius: 15px;
+        }
+        #about h2{
+            color: #c084fc;
+            font-size: 35px;
+        }
+        #about p{
+            line-height: 1.6;
+        }
+        #skills{
+            text-align: center;
+            margin: 100px auto;
+            max-width: 600px;
+        }
+        #skills h2{
+            color: #c084fc;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        .skill{
+            background-color: #382052;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .skill:hover{
+            background-color: #583078;
+            transform: translateY(-3px);
+        }
+        #contact{
+            text-align: center;
+            margin: 100px auto 50px;
+            padding: 40px 20px;
+            background-color: #382052;
+            border-radius: 15px;
+            max-width: 600px;
+        }
+        #contact h2{
+            color: #c084fc;
+            font-size: 35px;
+        }
+        #contact p{
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .contact-button{
+            display: inline-block;
+            background-color: #a855f7;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-button:hover{
+            background-color: #c084fc;
+            transform: translateY(-3px);
+        }
+        /* ТЕЛЕФОООООН */
+        @media(max-width: 600px){
+            h1{
+                font-size: 42px;
+            }
+            p{
+                font-size: 18px;
+            }
+            #about, #skills, #contact{
+                margin: 50px 15px;
+                padding: 20px;
+            }
+            #about h2, #skills h2, #contact h2{
+                font-size: 28px;
+            }
+            .skill{
+                font-size: 16px;
+            }
+        }
+         #about, #skills, #contact{
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+         }
+         @keyframes fadeIn{
+            to{
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+         }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Тестовый сайт</h1>
+<p>Студент программист</p>
+<button onclick="showProjects()">Мои проэкты</button>
+<section id="about">
+    <h2>Обо мне</h2>
+    <p>
+        Я начинающий тестировщик сайтов.
+        Изучаю программирование и ищу возможность
+        помогать находить ошибки на сайтах.
+    </p>
+
+</section>
+<section id="skills">
+    <h2>Мои навыки</h2>
+    <div class="skill">HTML - базовые знания</div>
+    <div class="skill">CSS — базовые знания</div>
+    <div class="skill">Ручное тестирование сайтов</div>
+    <div class="skill">Поиск и описание ошибок</div>
+</section>
+<div id="projects">
+    <h2>Мои проэкты</h2>
+    <p>Здесь появятся мои работы</p>
+</div>
+<section id="contact">
+    <h2>Cвязаться со мной</h2>
+    <p>Есть проэкт или предложение? Напиши мне!</p>
+    <a href="https://t.me/Novori4nij" class="contact-button" target="_blank">
+        Написать в телеграм
+    </a>
+</section>
+<script>
+    function showProjects(){
+        document.getElementById("projects").scrollIntoView({behavior:"smooth"});
+    }
+</script>
+</body>
+</html>
